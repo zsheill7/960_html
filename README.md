@@ -4,6 +4,8 @@ For the purpose of creating HTML templates for creating surveys in Mechnical Tur
 
 Current specifications:
 
+** Side note: some hand drawn or digitally drawn pictures of the survey could help
+
 Survey qualifications:
 * A human with an MTurk account
 * Answers a statistically significant number of questions in Preliminary Art Knowledge survey wrong
