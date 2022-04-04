@@ -19,7 +19,7 @@
         categories="['Iconoclasm', 'Renaissance', 'Baroque', 'Rococo', 'Romanticism', 'Impressionism', 
         'Realism', 'Cubism', 'Abstract-expressionism', 'Fauvism', 'Surrealism']"
         header="From the following art period options, choose the most appropriate art period that best
-        suits the painting. Feel free to reference the cheat sheet in the [insert corner here]"
+        suits the painting. Feel free to reference the cheat sheet in the 'more instructions' section."
         name="category">
 
        <!-- Use the short-instructions section for quick instructions that the Worker
@@ -37,7 +37,60 @@
               help get good results. You can include any HTML here. -->
         <full-instructions header="Classification Instructions">
             <p>Read the task carefully and inspect the image.</p>
-            <p>Choose the appropriate label that best suits the image.</p>
+            <p>Choose the appropriate label that best suits the image. </p>
+            <p>Reference Sheet:</p>
+            <p>Iconoclasm:</p>
+                <p><img width="30%" src="https://s3.amazonaws.com/mturk/samples/image_category/dog.jpg"/>
+                    <img width="30%" src =  "https://s3.amazonaws.com/mturk/samples/image_category/cat.jpg"/>
+                    <img width="30%" src="  https://s3.amazonaws.com/mturk/samples/image_category/bird.jpg"/>
+            </p>
+            <p>Renaissance:  
+                <img width="30%" src="  https://s3.amazonaws.com/mturk/samples/image_category/cat.jpg"/>
+            </p>
+            <p>Baroque: 
+                <img width="30%" src="  https://s3.amazonaws.com/mturk/samples/image_category/bird.jpg"/>
+            </p>
+            <p>Rococo:</p>
+                <p><img width="30%" src="https://s3.amazonaws.com/mturk/samples/image_category/dog.jpg"/>
+                    <img width="30%" src =  "https://s3.amazonaws.com/mturk/samples/image_category/cat.jpg"/>
+                    <img width="30%" src="  https://s3.amazonaws.com/mturk/samples/image_category/bird.jpg"/>
+            </p>
+            <p>Romanticism:</p>
+                <p><img width="30%" src="https://s3.amazonaws.com/mturk/samples/image_category/dog.jpg"/>
+                    <img width="30%" src =  "https://s3.amazonaws.com/mturk/samples/image_category/cat.jpg"/>
+                    <img width="30%" src="  https://s3.amazonaws.com/mturk/samples/image_category/bird.jpg"/>
+            </p>
+            <p>Impressionism:</p>
+                <p><img width="30%" src="https://s3.amazonaws.com/mturk/samples/image_category/dog.jpg"/>
+                    <img width="30%" src =  "https://s3.amazonaws.com/mturk/samples/image_category/cat.jpg"/>
+                    <img width="30%" src="  https://s3.amazonaws.com/mturk/samples/image_category/bird.jpg"/>
+            </p>
+            <p>Realism:</p>
+                <p><img width="30%" src="https://s3.amazonaws.com/mturk/samples/image_category/dog.jpg"/>
+                    <img width="30%" src =  "https://s3.amazonaws.com/mturk/samples/image_category/cat.jpg"/>
+                    <img width="30%" src="  https://s3.amazonaws.com/mturk/samples/image_category/bird.jpg"/>
+            </p>
+            <p>Cubism:</p>
+                <p><img width="30%" src="https://s3.amazonaws.com/mturk/samples/image_category/dog.jpg"/>
+                    <img width="30%" src =  "https://s3.amazonaws.com/mturk/samples/image_category/cat.jpg"/>
+                    <img width="30%" src="  https://s3.amazonaws.com/mturk/samples/image_category/bird.jpg"/>
+            </p>
+            <p>Abstract-Expressionsim:</p>
+                <p><img width="30%" src="https://s3.amazonaws.com/mturk/samples/image_category/dog.jpg"/>
+                    <img width="30%" src =  "https://s3.amazonaws.com/mturk/samples/image_category/cat.jpg"/>
+                    <img width="30%" src="  https://s3.amazonaws.com/mturk/samples/image_category/bird.jpg"/>
+            </p>
+            <p>Fauvism:</p>
+                <p><img width="30%" src="https://s3.amazonaws.com/mturk/samples/image_category/dog.jpg"/>
+                    <img width="30%" src =  "https://s3.amazonaws.com/mturk/samples/image_category/cat.jpg"/>
+                    <img width="30%" src="  https://s3.amazonaws.com/mturk/samples/image_category/bird.jpg"/>
+            </p>
+            <p>Surrealism:</p>
+                <p><img width="30%" src="https://s3.amazonaws.com/mturk/samples/image_category/dog.jpg"/>
+                    <img width="30%" src =  "https://s3.amazonaws.com/mturk/samples/image_category/cat.jpg"/>
+                    <img width="30%" src="  https://s3.amazonaws.com/mturk/samples/image_category/bird.jpg"/>
+            </p>
+            
         </full-instructions>
 
     </crowd-image-classifier>
