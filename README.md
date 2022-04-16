@@ -6,6 +6,14 @@ Current specifications:
 
 ** Side note: some hand drawn or digitally drawn pictures of the survey could help
 
+Command to get filenames from folder and subfolders:
+
+```
+find . -iname '*.jpg' -type f >pandora_filepaths_updated.csv
+```
+
+Also have to remove anything with "tienne Istv" - there's a character that MTurk doesn't like
+
 Survey qualifications:
 * A human with an MTurk account
 * Answers a statistically significant number of questions in Preliminary Art Knowledge survey wrong
