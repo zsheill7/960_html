@@ -7,6 +7,8 @@ filename_output = 'pandora_filepath_output.csv'
 
 path = "/Users/zoe/Documents/classes-sp22/9.60/Pandora_V1"
 
+# Takes all the files in the current file directory and adds the name in directory to a CSV
+# Resulting CSV example line: HighRenaissance/25114.jpg
 with open(filename_input, 'w') as f:
     writer = csv.writer(f)
     for (root, dirs, file) in os.walk(path):
@@ -21,6 +23,10 @@ with open(filename_input, 'w') as f:
 # Should end up being >7000 image links
 total_links = []
 
+# Take all the file lines from the previous file
+# 1. Add a prefix link to make sure it links to Amazon AWS
+# 2. Remove commas
+# 3. Remove weird special characters
 with open(filename_output, 'w') as csvfile_output:
     with open(filename_input, 'r') as csvfile_input:
         reader = csv.reader(csvfile_input)
@@ -44,6 +50,7 @@ with open(filename_output, 'w') as csvfile_output:
                 writer.writerow(row)
 
 # Make 10 CSVs of 15 image links each
+# Image link subset is random
 for i in range(0, 10):
     random_15 = random.sample(total_links, 15)
     print("random_15")
