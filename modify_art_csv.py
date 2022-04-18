@@ -48,11 +48,11 @@ for i in range(0, 10):
     random_15 = random.sample(total_links, 15)
     print("random_15")
     print(random_15)
-    try: 
-        os.mkdir("random_15_csv") 
+    try:
+        os.mkdir("random_15_images_csv") 
     except OSError as error: 
         print(error)  
-    with open("random_15_csv/random_15_" + str(i) + ".csv", 'w') as random_csvfile:
+    with open("random_15_images_csv/random_15_" + str(i) + ".csv", 'w') as random_csvfile:
         writer = csv.writer(random_csvfile)
         for row in random_15:
             writer.writerow([row])
