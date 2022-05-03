@@ -1,0 +1,82 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<crowd-form answer-format="flatten-objects">
+
+    <!-- The crowd-classifier element will create a tool for the Worker to select the
+           correct answer to your question.
+
+          Your image file URLs will be substituted for the "image_url" variable below 
+          when you publish a batch with a CSV input file containing multiple image file URLs.
+          To preview the element with an example image, try setting the src attribute to
+          "https://s3.amazonaws.com/cv-demo-images/one-bird.jpg" -->
+    <crowd-image-classifier 
+        src="${image_url}"
+        categories="['Iconoclasm', 'Renaissance', 'Baroque', 'Rococo', 'Romanticism', 'Impressionism', 
+        'Realism']"
+        header="From the following art period options, choose the most appropriate art period that best
+        suits the painting. Reference the cheat sheet before you start in the 'more instructions' section."
+        name="category">
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions>
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image.</p>
+        </short-instructions>
+
+        <!-- Use the full-instructions section for more detailed instructions that the 
+              Worker can open while working on the task. Including more detailed 
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions header="Classification Instructions">
+            <p>Read the task carefully and inspect the image.</p>
+            <p>Choose the appropriate label that best suits the image. </p>
+            <p>Reference Sheet:</p>
+            <p>Iconoclasm:</p>
+                <p><img width="30%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Iconoclasm/ikon0293.jpg"/>
+                    <img width="30%" src ="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Iconoclasm/ikon0694.jpg"/>
+                    <img width="30%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Iconoclasm/ikon1763.jpg"/>
+            </p>
+            <p>Renaissance:  
+                <img width="30%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/HighRenaissance/370.jpg"/>
+                <img width="30%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/HighRenaissance/12381.jpg"/>
+                    <img width="20%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/HighRenaissance/13113.jpg"/>
+            </p>
+            <p>Baroque: 
+                <img width="30%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Baroque/1066.jpg"/>
+                    <img width="30%" src ="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Baroque/19680.jpg"/>
+                    <img width="20%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Baroque/26520.jpg"/>
+            </p>
+            <p>Rococo:</p>
+                <p><img width="30%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Rococo/11306.jpg"/>
+                    <img width="30%" src ="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Rococo/1887.jpg"/>
+                    <img width="30%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Rococo/27810.jpg"/>
+            </p>
+            <p>Romanticism:</p>
+                <p><img width="30%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Romanticism/10458.jpg"/>
+                    <img width="30%" src ="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Romanticism/21358.jpg"/>
+                    <img width="30%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Romanticism/5573.jpg"/>
+            </p>
+            <p>Impressionism:</p>
+                <p><img width="30%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Impressionism/Alfred+Sisley+(1)2.jpg"/>
+                    <img width="30%" src ="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Impressionism/gogh29313.jpg"/>
+                    <img width="30%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Impressionism/Paul+Cezanne+(34)673.jpg"/>
+            </p>
+            <p>Realism:</p>
+                <p><img width="30%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Realism/26367_375789075731_246401495731_3771591_3686322_n.jpg"/>
+                    <img width="30%" src ="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Realism/Jules+Breton+Tutt_Art%40+(28)(1).jpg"/>
+                    <img width="30%" src="https://artstylequalificationsurveyallperiods.s3.amazonaws.com/Pandora_V1-20220406T013528Z-001/Pandora_V1/Realism/Virgil+Elliott+Tutt_Art%40+(11).jpg"/>
+            </p>
+
+            
+        </full-instructions>
+
+    </crowd-image-classifier>
+</crowd-form>
